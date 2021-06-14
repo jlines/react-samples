@@ -5,6 +5,6 @@ sample: {"accessToken":"Actual Token Data"}
 
 
 npm install
-npm build
+npm run-script build
 npm start
 browser to http://localhost:3000/
