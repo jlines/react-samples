@@ -6,51 +6,6 @@ import config from './creds.json';
 
 const queryClient = new QueryClient()
 
-
-
-const columns = [
-  {
-    title: 'repository',
-    dataIndex: 'repository',
-    key: 'repository',
-  },
-  {
-    title: 'size',
-    dataIndex: 'size',
-    key: 'size',
-  },
-  {
-    title: 'version',
-    dataIndex: 'version',
-    key: 'version',
-  },
-  {
-    title: 'release',
-    dataIndex: 'release',
-    key: 'release',
-  },
-  {
-    title: 'createdTime',
-    dataIndex: 'createdTime',
-    key: 'createdTime',
-  },
-  {
-    title: 'description',
-    dataIndex: 'description',
-    key: 'description',
-  },
-  {
-    title: 'modifiedTime',
-    dataIndex: 'modifiedTime',
-    key: 'modifiedTime',
-  },
-  {
-    title: 'env',
-    dataIndex: 'env',
-    key: 'env',
-  },
-];
-
 const App = () => (
   <div className="App">
     
@@ -118,7 +73,7 @@ function ServerPaginatedData() {
          <div>Error: {error.message}</div>
        ) : (
          <div>           
-           <Table dataSource={data['items']} columns={columns} pagination={false}
+           <Table dataSource={data['items']} columns={columns} loading={isFetching && isPreviousData} pagination={false}
            />
          </div>
        )}
@@ -181,5 +136,50 @@ function PreloadClientPaginatedData() {
      </div>
    )
  }
+
+
+
+const columns = [
+  {
+    title: 'repository',
+    dataIndex: 'repository',
+    key: 'repository',
+  },
+  {
+    title: 'size',
+    dataIndex: 'size',
+    key: 'size',
+  },
+  {
+    title: 'version',
+    dataIndex: 'version',
+    key: 'version',
+  },
+  {
+    title: 'release',
+    dataIndex: 'release',
+    key: 'release',
+  },
+  {
+    title: 'createdTime',
+    dataIndex: 'createdTime',
+    key: 'createdTime',
+  },
+  {
+    title: 'description',
+    dataIndex: 'description',
+    key: 'description',
+  },
+  {
+    title: 'modifiedTime',
+    dataIndex: 'modifiedTime',
+    key: 'modifiedTime',
+  },
+  {
+    title: 'env',
+    dataIndex: 'env',
+    key: 'env',
+  },
+];
 
 export default App;
