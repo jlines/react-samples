@@ -1,6 +1,5 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
-import { Button } from 'antd';
 import { Table } from 'antd';
 import './App.css';
 import config from './creds.json';
@@ -159,7 +158,6 @@ function PreloadClientPaginatedData() {
      error,
      data,
      isFetching,
-     isPreviousData,
    } = useQuery('releases', () => fetchReleasesRecursive(), { keepPreviousData : true })
 
 
