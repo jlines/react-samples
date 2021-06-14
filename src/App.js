@@ -96,8 +96,8 @@ function PreloadClientPaginatedData() {
           .then((data) => {
             if(data.lastKey) {
               return fetchReleasesRecursive(data.lastKey)
-              .then((recData) => {
-                data.items = data.items.concat(recData.items);
+              .then((nextData) => {
+                data.items = data.items.concat(nextData.items);
                 return data;
               })
             }
