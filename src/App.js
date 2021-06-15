@@ -87,7 +87,7 @@ function ServerPaginatedData() {
 
 function PreloadClientPaginatedData() {
   var header = {"Authorization": "Bearer " + config.accessToken};
-  var url = "https://m5jy5zdds1.execute-api.us-east-1.amazonaws.com/qa/release?product=Apple+Pie&env=internal&repository=wolf&limit=10";
+  var url = "https://m5jy5zdds1.execute-api.us-east-1.amazonaws.com/qa/release?product=Apple+Pie&env=internal&repository=wolf";
 
 
   const fetchReleasesRecursive = (last = null) => {
