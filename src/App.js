@@ -1,7 +1,7 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 import { Table } from 'antd';
-import './App.css';
+import './App.less';
 import config from './creds.json';
 
 const queryClient = new QueryClient()
